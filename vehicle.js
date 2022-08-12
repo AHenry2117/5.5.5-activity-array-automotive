@@ -26,11 +26,11 @@ class Vehicle {
                 console.log(this.speed += 1);
                 this.fuel = this.fuel - 1;
             } else {
-                console.log("out of fuel.");
+                console.log("No Fuel");
                 this.stop();
             }
         } else {
-            alert("You need to start the engine first.");
+            alert("Start your Engine");
         }
     }
     decelerate() {
@@ -44,39 +44,23 @@ class Vehicle {
                     this.fuel = this.fuel - 1;
                 }
             } else {
-                console.log("out of fuel.");
+                console.log("No Fuel");
                 this.stop();
             }
         } else {
-            alert("You need to start the engine first.");
+            alert("Start your Engine");
         }
     }
     stop() {
+        console.log('Engine Off')
         this.started = false;
     }
 
-    drive() {
-        accelerate();
-    }
-    brake() {
-        decelerate();
-    }
-
-    autoPark()
-    {
-
-    }
-
-    autoDrive()
-    {
-      
-    }
-
     typeOfVehicle(wheels) {
-        if (this.numberOfWheels == 8 && 8 == wheels) {
+        if (this.numberOfWheels == 6 && 6 == wheels) {
             console.log(this.model + " " + this.make + " is a Truck");
         } else if (this.numberOfWheels == 4 && 4 == wheels) {
-            console.log(this.model + " " + this.make + " is a CAr");
+            console.log(this.model + " " + this.make + " is a Car");
         } else if (this.numberOfWheels == 2 && 2 == wheels) {
             console.log(this.model + " " + this.make + " is a Bike");
         } else {
@@ -86,6 +70,4 @@ class Vehicle {
 }
 
 //This exports things you want to use from this "module", more info in readme
-module.exports = {
-    Vehicle
-}
+module.exports = {Vehicle}
